@@ -15,14 +15,14 @@ variable "vpc_id" {
   default     = ""
 }
 
-variable "cidr_blocks" {
-  description = "list of cidr blocks allowed ingress"
-  type        = list(string)
-  default     = []
+variable "create_ingress_rule" {
+  description = "create ingress rule?"
+  type = bool
+  default = true
 }
 
-variable "ingress_rules" {
-  description = "list of ingress rules"
+variable "cidr_blocks" {
+  description = "list of cidr blocks allowed ingress"
   type        = list(string)
   default     = []
 }
