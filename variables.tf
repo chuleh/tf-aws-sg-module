@@ -26,3 +26,21 @@ variable "cidr_blocks" {
   type        = list(string)
   default     = []
 }
+
+variable "source_security_group_id" {
+  description = "source sg id"
+  type = list(string)
+  default = []
+}
+
+variable "from_port" {
+  description = "ingress port"
+  type = string
+  default = ""
+}
+
+variable "to_port" {
+  description = "where to"
+  type = string
+  default = ""
+}
